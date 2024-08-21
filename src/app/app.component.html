@@ -1,0 +1,9 @@
+<div *ngIf="loading;else treeDiv" class="loading-container">
+  <div class="loading-spinner"></div>
+  <p>Loading...</p>
+</div>
+<ng-template #treeDiv>
+  <div *ngIf="!loading" id="tree">
+    <p-tree selectionMode="checkbox" [value]="treeHtml"></p-tree>
+  </div>
+</ng-template>
